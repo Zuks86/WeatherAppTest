@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Weather App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script>
+			$(window).load(function(){
+				$.ajax({
+					url: "/api/key",
+					data: {},
+					type: "get",
+					success: function(response) {
+						//Do Something
+						console.log("good");
+						console.log(response);
+					},
+					error: function(xhr) {
+						console.log("bad");
+						console.log(xhr);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Weather App is live!</h1>
+		
+	</body>
+</html>

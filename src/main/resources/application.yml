@@ -1,2 +1,9 @@
 server:
   port: 8011
+
+weather:
+  api:
+    key: 51a6e8249ceed76f1cd0e7147c5a653a
+    default:
+      units: metric
+      city: 3369157
