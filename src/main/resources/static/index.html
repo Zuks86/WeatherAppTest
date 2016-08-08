@@ -8,9 +8,10 @@
 		<script>
 			$(window).load(function(){
 				$.ajax({
-					url: "/api/key",
+					url: "/api/weather",
 					data: {},
 					type: "get",
+					dataType: "json",
 					success: function(response) {
 						//Do Something
 						console.log("good");
