@@ -22,7 +22,8 @@
 	<body>
 		<h1 th:text="${typeFirstUpper} + ' Weather Forecast'"></h1>
 		<h2></h2>
-		<div style="text-align: center;margin-bottom: 16px;">
+		
+		<div th:if="${type == 'dynamic'}" style="text-align: center;margin-bottom: 16px;">
 			<div id="changeCityBtn" class="button" onclick="showCitySearch();">CHANGE CITY</div>
 		</div>
 		
@@ -42,7 +43,7 @@
 		<div class="cover" style="z-index: 110;">
 			<img class="ajax hvCenter" src="images/ajax.gif" />
 		</div>
-		<div id="changeCitySpace" class="cover">
+		<div th:if="${type == 'dynamic'}" id="changeCitySpace" class="cover">
 			<div style="color: #b34727; font-weight: bold;margin-top: 5px;">NB: Select country to decrease chances of ambiguity</div>
 			
 			<div style="color: #A2481E; font-weight: bold;margin-top:40px">COUNTRY:</div>
