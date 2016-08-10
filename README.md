@@ -15,11 +15,13 @@ Upon installing java-8 and maven then the following command will start the app i
 
 In the case of the app started at port 8011 then opening a web browser and typing *localhost:8011* should take you to the home page of the app.
 
-## API USED
+## API USED AND LIMITATIONS
 
 The free weather api used is from [http://openweathermap.org/](http://openweathermap.org/). Here are a few things that I believe are necessary to note about the api:
 
 1) The api returns data for 5 days (for our purpose) for a particular city. Each day has weather forecast at 3 hour intervals. For the sake of this coding task only one of the forecasts per day were selected. The rule used to determine which one to select was:<br />
-a) Select the 12:00 (noon) entry.
-b) If it is not available select the entry closest to 12:00
+a) Select the 12:00 (noon) entry.<br />
+b) If it is not available select the entry closest to 12:00<br />
 c) If there are two entries equally close to 12:00, eg 09:00 and 14:00 which are both 3 hours away from 12:00, then take the later entry which in this example would be the 15:00 entry
+
+2) There is a limitation on the api since it is using the free version as opposed to the paid for version. It it stipulated that one must not send requests more then 1 time per 10 minutes from one device/one API key. Moreover best results are received when a person searches by ***city*** id as opposed to ***city name***. This means that our implementation which uses the city name may not always bring back the right response.
