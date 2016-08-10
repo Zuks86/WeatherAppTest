@@ -44,3 +44,9 @@ Dynamic Forecast Page:<br />
 
 Changing City:<br />
 ![Alt text](/src/main/resources/static/images/change-city-screenshot.png?raw=true "Optional Title")
+
+MOBILE SCREEN SHOTS (Chrome Galaxy S5 simulator):
+
+![Alt text](/src/main/resources/static/images/home-screenshot-mobile.png?raw=true "Optional Title")
+![Alt text](/src/main/resources/static/images/dynamic-screenshot-mobile.png?raw=true "Optional Title")
+![Alt text](/src/main/resources/static/images/change-city-screenshot-mobile.png?raw=true "Optional Title")
