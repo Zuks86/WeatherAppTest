@@ -69,7 +69,7 @@ function display() {
 	
 	$("#missingTempsValues").html(set.getMissingValuesString());
 	
-	showAjax(false);
-	
 	plotGraph(weatherData.details.location, maxRange, minRange);
+	
+	showAjax(false);
 }
