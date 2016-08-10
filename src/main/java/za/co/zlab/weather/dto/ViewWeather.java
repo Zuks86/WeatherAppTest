@@ -1,5 +1,12 @@
 package za.co.zlab.weather.dto;
 
+/**
+* ViewWeather is one of the classes form part of the DTO used to send data to the view
+*
+* @author  Zukisani Zamela
+* @version 1.0
+* @since   2016-08-10
+*/
 public class ViewWeather {
 	
 	private String condition;

@@ -4,6 +4,13 @@ import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/**
+* City is one of the classes that form part of the external (3rd party) api representation
+*
+* @author  Zukisani Zamela
+* @version 1.0
+* @since   2016-08-10
+*/
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class City {
 	private int id;

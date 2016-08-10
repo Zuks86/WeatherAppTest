@@ -10,6 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 import za.co.zlab.weather.dto.ViewWeatherResponse;
 import za.co.zlab.weather.external.RestApis;
 
+/**
+* RestApiController implements the endpoints for the weather api proxy
+*
+* @author  Zukisani Zamela
+* @version 1.0
+* @since   2016-08-10
+*/
 @RestController
 public class RestApiController {
 	

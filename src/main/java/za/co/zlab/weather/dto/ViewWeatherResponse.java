@@ -10,6 +10,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+* ViewWeatherResponse is the encapsulating DTO class that sends the response to the view 
+*
+* @author  Zukisani Zamela
+* @version 1.0
+* @since   2016-08-10
+*/
 public class ViewWeatherResponse {
 
 	private Details details;
@@ -153,8 +160,6 @@ public class ViewWeatherResponse {
 				
 				details = new Details(firstDate,apiResponse.getCity().getName());
 				
-				//System.out.println(this);
-				
 				
 			} catch (ParseException e) {
 				e.printStackTrace();
@@ -173,18 +178,5 @@ public class ViewWeatherResponse {
 				day4+"\n"+
 				day5+"\n\n";
 	}
-	
-	/*public static void main(String[] args) throws ParseException {
-		
-		System.out.println("2016-08-08 12:00:00".substring(0, 10));
-		
-		Calendar cal = Calendar.getInstance();
-		cal.setTime(sdf.parse("2016-01-08 12:00:00"));
-		int year = cal.get(Calendar.YEAR);
-		int month = cal.get(Calendar.MONTH);
-		int hour = cal.get(Calendar.HOUR_OF_DAY);
-		System.out.println(hour);
-		
-	}*/
 	
 }

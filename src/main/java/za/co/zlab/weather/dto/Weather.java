@@ -2,6 +2,13 @@ package za.co.zlab.weather.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/**
+* Weather is one of the classes that form part of the external (3rd party) api representation
+*
+* @author  Zukisani Zamela
+* @version 1.0
+* @since   2016-08-10
+*/
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Weather {
 	private int id;

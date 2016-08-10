@@ -5,6 +5,13 @@ import java.util.Date;
 
 import static za.co.zlab.weather.constants.Constants.DATE_FORMAT_DATE_ONLY;
 
+/**
+* Details is one of the classes form part of the DTO used to send data to the view
+*
+* @author  Zukisani Zamela
+* @version 1.0
+* @since   2016-08-10
+*/
 public class Details {
 	private String lastModified;
 	private String location;
