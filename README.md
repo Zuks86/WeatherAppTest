@@ -1,3 +1,3 @@
 ## Introduction
 
-The WeatherAppTest project is a projet that 
+The WeatherAppTest project is a project that 
