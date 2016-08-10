@@ -25,3 +25,11 @@ b) If it is not available select the entry closest to 12:00<br />
 c) If there are two entries equally close to 12:00, eg 09:00 and 14:00 which are both 3 hours away from 12:00, then take the later entry which in this example would be the 15:00 entry
 
 2) There is a limitation on the api since it is using the free version as opposed to the paid for version. It it stipulated that one must not send requests more then 1 time per 10 minutes from one device/one API key. Moreover best results are received when a person searches by ***city*** id as opposed to ***city name***. This means that our implementation which uses the city name may not always bring back the right response.
+
+## USING THE DYNAMIC APP
+
+After installing the dynamic app (the spring-boot one, or the one installed using maven) on landing on the home page you will be presented with two options:
+
+a) STATIC FORECAST: This one is similar, pretty much identical, to the experience you get when using the "no server" version you get from the zip file. It is static and always shows the same data for the same city all the time.
+
+b) DYNAMIC FORECAST: This one is dynamic in that it always you to choose not only the city but the country (for more accuracy) whose weather is desired. The browser further stores the last selected city and country so that when the app is visited again in will show the last selected country and city. Cape Town, South Africa (ZA) is the default city,country combo.
