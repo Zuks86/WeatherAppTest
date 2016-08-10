@@ -1,5 +1,4 @@
 $(window).load(onLoad);
-$(window).resize(onResize);
 
 var weatherData;
 
@@ -19,10 +18,6 @@ function onLoad() {
 		}
 	});
 	
-}
-
-function onResize() {
-	// code to call when page resizes
 }
 
 var maxRange, minRange;
