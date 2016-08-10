@@ -34,5 +34,13 @@ a) STATIC FORECAST: This one is similar, pretty much identical, to the experienc
 
 b) DYNAMIC FORECAST: This one is dynamic in that it always you to choose not only the city but the country (for more accuracy) whose weather is desired. The browser further stores the last selected city and country so that when the app is visited again in will show the last selected country and city. Cape Town, South Africa (ZA) is the default city,country combo.
 
-SCREENSHOT: <br />
+SCREENSHOTS:
+
+Home Page:<br />
+![Alt text](/src/main/resources/static/images/home-screenshot.png?raw=true "Optional Title")
+
+Dynamic Forecast Page:<br />
 ![Alt text](/src/main/resources/static/images/dynamic-screenshot.png?raw=true "Optional Title")
+
+Changing City:<br />
+![Alt text](/src/main/resources/static/images/change-city-screenshot.png?raw=true "Optional Title")
