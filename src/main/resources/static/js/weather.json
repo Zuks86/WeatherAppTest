@@ -1,0 +1,31 @@
+{
+	"details": {
+		"location": "Cape Town",
+		"lastModified": "2016-05-17"
+	},
+	"day1": {
+		"high": 30,
+		"low": 13,
+		"condition": "Clear"
+	},
+	"day2": {
+		"high": 19,
+		"low": 12,
+		"condition": "Partly Cloudy"
+	},
+	"day3": {
+		"high": 17,
+		"low": 8,
+		"condition": "Partly Cloudy"
+	},
+	"day4": {
+		"high": 19,
+		"low": 11,
+		"condition": "Clear"
+	},
+	"day5": {
+		"high": 21,
+		"low": 11,
+		"condition": "Partly Cloudy"
+	}
+}

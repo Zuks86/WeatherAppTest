@@ -1,0 +1,14 @@
+img {
+	display: block;
+	margin: auto;
+}
+
+#center_btn_container {
+	text-align: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.button {
+	width: 200px;
+}

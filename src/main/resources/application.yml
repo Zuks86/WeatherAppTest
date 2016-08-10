@@ -5,5 +5,6 @@ weather:
   api:
     key: 51a6e8249ceed76f1cd0e7147c5a653a
     default:
-      city: 3369157
+      country_code: ZA
+      city: Cape Town
       units: metric

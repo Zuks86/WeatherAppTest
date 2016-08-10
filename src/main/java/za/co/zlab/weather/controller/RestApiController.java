@@ -7,14 +7,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import za.co.zlab.weather.dto.ExternalApiWeatherResponse;
+import za.co.zlab.weather.dto.ViewWeatherResponse;
 import za.co.zlab.weather.external.RestApis;
 
 @RestController
 public class RestApiController {
 	
+	@Value("${weather.api.default.country_code}")
+    public String defaultCountryCode; //Cape Town
+	
 	@Value("${weather.api.default.city}")
-    public Integer defaultCityId; //Cape Town City Id
+    public String defaultCity; //Cape Town
 	
 	@Value("${weather.api.default.units}")
     public String defaultUnits; //metric
@@ -23,16 +26,20 @@ public class RestApiController {
 	public RestApis restApis;
 
 	@RequestMapping(value = "/api/weather", method = RequestMethod.GET)
-    public ExternalApiWeatherResponse getUsers(@RequestParam(value = "id", required = false, defaultValue = "-1") Integer id, @RequestParam(value = "units", required = false) String units) {
+    public ViewWeatherResponse getUsers(@RequestParam(value = "country_code", required = false) String countryCode, @RequestParam(value = "city", required = false) String city, @RequestParam(value = "units", required = false) String units) {
 		
-    	if(id == -1) {
-    		id = defaultCityId;
+		if(countryCode == null) {
+    		countryCode = defaultCountryCode;
+    	}
+		
+    	if(city == null) {
+    		city = defaultCity;
     	}
     	
     	if(units == null) {
     		units = defaultUnits;
     	}
     	
-    	return restApis.getWeather(id, units);
+    	return restApis.getWeather(countryCode, city, units);
     }
 }

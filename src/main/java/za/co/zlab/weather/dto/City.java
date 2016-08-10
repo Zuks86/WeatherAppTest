@@ -45,7 +45,4 @@ public class City {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	
-	
-	
 }

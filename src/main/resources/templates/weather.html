@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title th:text="${typeFirstUpper} + ' Weather Forecast'"></title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link rel="shortcut icon" href="fav.ico" type="image/x-icon" />
+		<link rel="icon" href="fav.ico" type="image/x-icon" />
+		
+		<link rel="stylesheet" href="css/roboto.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/weather.css" />
+		
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"></script>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="js/common.js"></script>
+		<script th:src="'js/weather-' + ${type} +'.js'"></script>
+	</head>
+	<body>
+		<h1 th:text="${typeFirstUpper} + ' Weather Forecast'"></h1>
+		<h2></h2>
+		
+		<div id="day1Value"></div>
+		<div id="forecast"></div>
+		
+		<div id="averages">
+			<div id="avgMax">AVERAGE MAX = <span id="avgMaxValue"></span></div>
+			<div id="avgMin">AVERAGE MIN = <span id="avgMinValue"></span></div>
+		</div>
+		
+		<div id="missingTemps">MISSING TEMPERATURES:<br /><span id="missingTempsValues"></span></div>
+		
+		<label id="graphLabel">GRAPH:</label>
+		<div id="graph"></div>
+		
+		<div class="cover">
+			<img class="ajax hvCenter" src="images/ajax.gif" />
+		</div>
+	</body>
+</html>

@@ -1,11 +1,14 @@
 package za.co.zlab.weather.dto;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WeatherAtTimeEntry {
 	
 	private Main main;
+	private List<Weather> weather;
 	private String dt_txt;
 	
 	
@@ -19,6 +22,14 @@ public class WeatherAtTimeEntry {
 
 	public void setMain(Main main) {
 		this.main = main;
+	}
+
+	public List<Weather> getWeather() {
+		return weather;
+	}
+
+	public void setWeather(List<Weather> weather) {
+		this.weather = weather;
 	}
 
 	public String getDt_txt() {
