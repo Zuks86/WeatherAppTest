@@ -33,3 +33,6 @@ After installing the dynamic app (the spring-boot one, or the one installed usin
 a) STATIC FORECAST: This one is similar, pretty much identical, to the experience you get when using the "no server" version you get from the zip file. It is static and always shows the same data for the same city all the time.
 
 b) DYNAMIC FORECAST: This one is dynamic in that it always you to choose not only the city but the country (for more accuracy) whose weather is desired. The browser further stores the last selected city and country so that when the app is visited again in will show the last selected country and city. Cape Town, South Africa (ZA) is the default city,country combo.
+
+SCREENSHOT: <br />
+![Alt text](/src/main/resources/static/images/dynamic-screenshot.png?raw=true "Optional Title")
