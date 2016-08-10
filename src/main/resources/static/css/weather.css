@@ -4,7 +4,7 @@ h1 {
 }
 
 h2 {
-	margin-bottom: 16px;
+	margin-bottom: 2px;
     font-size: 18px;
     text-align: center;
     color: #3e1b0f;
@@ -106,6 +106,41 @@ h2 {
 	color: #3e1b0f;
 	display: block;
 	margin-top: 32px;
+}
+
+#changeCityBtn {
+	padding: 2px 4px;
+}
+
+#changeCitySpace {
+	text-align: center;
+    background: rgba(255,255,255,0.95);
+    overflow-y: auto;
+}
+
+#countries {
+	padding: 4px;
+	max-width: 95%;
+}
+
+#cityInput {
+	padding: 3px;
+	max-width: 95%;
+	font-size: 16px;
+	text-align: center;
+}
+
+#changeCitySpace .actionBtns div {
+    padding: 2px 4px;
+    margin: 10px 2.5px 0px 2.5px;
+}
+
+#changeCitySpace .actionBtns div:first-child {
+	
+}
+
+#changeCitySpace .actionBtns div:nth-child(2) {
+	
 }
 
 @media (max-width:400px) {
