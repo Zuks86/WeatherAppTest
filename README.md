@@ -24,6 +24,11 @@ a) Select the 12:00 (noon) entry.<br />
 b) If it is not available select the entry closest to 12:00<br />
 c) If there are two entries equally close to 12:00, eg 09:00 and 14:00 which are both 3 hours away from 12:00, then take the later entry which in this example would be the 15:00 entry
 
+UPDATE:
+Since sometimes the max and min temperatures for a particular time tend to be the same we are changing the rule that determines which max and min temperatures to use from the results:
+a) Get the highest max value from all forecasts for that day and set it is the max value.
+b) Get the lowest min value from all forecasts for that day and set it is the min value.
+
 2) There is a limitation on the api since it is using the free version as opposed to the paid for version. It it stipulated that one must not send requests more then 1 time per 10 minutes from one device/one API key. Moreover best results are received when a person searches by ***city*** id as opposed to ***city name***. This means that our implementation which uses the city name may not always bring back the right response.
 
 ## USING THE DYNAMIC APP

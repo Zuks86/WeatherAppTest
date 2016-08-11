@@ -87,8 +87,7 @@ public class ViewWeatherResponse {
 				
 				/*
 				Will use one weather forecast entry per day. 
-				The 12:00 entry is used if it is available else the closest value to 12:00 is used 
-				with the evening being preferred over the morning (i.e: 15:00 takes precedence over 09:00).
+				The lowest min temperature for that day is taken and the highest max temperature for that day is taken.
 				*/
 				for(WeatherAtTimeEntry entry : apiResponse.getList()) {
 					Weather weather = entry.getWeather().get(0);
@@ -111,20 +110,29 @@ public class ViewWeatherResponse {
 					}
 					
 					if(map.containsKey(key)) {
+						WeatherTransformDTO currentForDay = map.get(key);
+						
 						Calendar cal = Calendar.getInstance();
 						
 						cal.setTime(dto.getDate());
 						int newHour = cal.get(Calendar.HOUR_OF_DAY);
 						
-						cal.setTime(map.get(key).getDate());
+						cal.setTime(currentForDay.getDate());
 						int currentHour = cal.get(Calendar.HOUR_OF_DAY);
 						
 						if( Math.abs(12-newHour) < Math.abs(12-currentHour) ) { 
-							// new entry closer to 12 that existing entry
-							map.put(key, dto);
+							currentForDay.setCondition(dto.getCondition());
+							currentForDay.setIcon(dto.getIcon());
 						} else if( Math.abs(12-newHour) == Math.abs(12-currentHour) && newHour > currentHour) {
-							// new entry is as close to 12 as existing entry but it is later during the day
-							map.put(key, dto);
+							currentForDay.setCondition(dto.getCondition());
+							currentForDay.setIcon(dto.getIcon());
+						}
+						
+						if(currentForDay.getLow() > dto.getLow()) {
+							currentForDay.setLow(dto.getLow());
+						}
+						if(currentForDay.getHigh() < dto.getHigh()) {
+							currentForDay.setHigh(dto.getHigh());
 						}
 					}else {
 						map.put(key, dto);
