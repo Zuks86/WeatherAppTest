@@ -79,11 +79,15 @@ class CustomSet {
 
 function getWeatherDayHtml(name,max,min,icon) {
 	
-	max = max > 9 ? max+"&deg;C" : "0"+max+"&deg;C";
-	min = min > 9 ? min+"&deg;C" : "0"+min+"&deg;C";
+	var maxStr, minStr;
 	
-	var $maxTemp = $("<span />").addClass("maxTemp").html(max);
-	var $minTemp = $("<span />").addClass("minTemp").html(min);
+	if(Math.abs)
+	
+	var maxStr = Math.abs(max) > 9 ? (max+"&deg;C") : (max > 0 ? "0"+max+"&deg;C" : "-0"+Math.abs(max)+"&deg;C");
+	var minStr = Math.abs(min) > 9 ? (min+"&deg;C") : (min > 0 ? "0"+min+"&deg;C" : "-0"+Math.abs(min)+"&deg;C");
+	
+	var $maxTemp = $("<span />").addClass("maxTemp").html(maxStr);
+	var $minTemp = $("<span />").addClass("minTemp").html(minStr);
 	
 	var $temp = $("<div />").addClass("temp").addClass("horizontalCenter");
 	$temp.append($maxTemp).append($minTemp);
@@ -109,7 +113,7 @@ function formatDate(date) {
 	return day + " " + month + " " + year;
 }
 
-function plotGraph(cityName, maxRange, minRange) {
+function plotGraph(cityName, maxRange, minRange, minValue) {
 	$('#graph').highcharts({
         chart: {
             type: 'column'
@@ -127,7 +131,7 @@ function plotGraph(cityName, maxRange, minRange) {
             ]
         },
         yAxis: [{
-            min: 0,
+            min: minValue,
             title: {
                 text: 'Temperature (°C)'
             }

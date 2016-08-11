@@ -20,18 +20,18 @@ function onLoad() {
 	
 }
 
-var maxRange, minRange;
+var maxRange, minRange, set;
 
 function display() {
 	maxRange = [];
 	minRange = [];
 	var avgMax=0, avgMin=0;
-	var set = new CustomSet();
+	set = new CustomSet();
 	
 	$("h2").text(weatherData.details.location);
 	$("#day1Value").text(("Day 1 = " + formatDate(new Date(weatherData.details.lastModified))).toUpperCase());
 	
-	//$("#forecast").empty();
+	$("#forecast").empty();
 	for(var i=1;i<=5;i++) {
 		var day = weatherData["day"+i];
 		
@@ -64,7 +64,7 @@ function display() {
 	
 	$("#missingTempsValues").html(set.getMissingValuesString());
 	
-	plotGraph(weatherData.details.location, maxRange, minRange);
+	plotGraph(weatherData.details.location, maxRange, minRange, set.getMin());
 	
 	showAjax(false);
 }
