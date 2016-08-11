@@ -81,8 +81,6 @@ function getWeatherDayHtml(name,max,min,icon) {
 	
 	var maxStr, minStr;
 	
-	if(Math.abs)
-	
 	var maxStr = Math.abs(max) > 9 ? (max+"&deg;C") : (max > 0 ? "0"+max+"&deg;C" : "-0"+Math.abs(max)+"&deg;C");
 	var minStr = Math.abs(min) > 9 ? (min+"&deg;C") : (min > 0 ? "0"+min+"&deg;C" : "-0"+Math.abs(min)+"&deg;C");
 	
