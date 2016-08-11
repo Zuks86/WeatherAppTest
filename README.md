@@ -42,16 +42,16 @@ b) DYNAMIC FORECAST: This one is dynamic in that it always you to choose not onl
 SCREENSHOTS:
 
 Home Page:<br />
-![Alt text](/src/main/resources/static/images/home-screenshot.png?raw=true "Optional Title")
+![Alt text](/src/main/resources/static/images/home-screenshot.png?raw=true "Home Page Desktop")
 
 Dynamic Forecast Page:<br />
-![Alt text](/src/main/resources/static/images/dynamic-screenshot.png?raw=true "Optional Title")
+![Alt text](/src/main/resources/static/images/dynamic-screenshot.png?raw=true "Dynamic Forecast Desktop")
 
 Changing City:<br />
-![Alt text](/src/main/resources/static/images/change-city-screenshot.png?raw=true "Optional Title")
+![Alt text](/src/main/resources/static/images/change-city-screenshot.png?raw=true "Changing City Desktop")
 
 MOBILE SCREEN SHOTS (Chrome Galaxy S5 simulator):
 
-![Alt text](/src/main/resources/static/images/home-screenshot-mobile.png?raw=true "Optional Title")
-![Alt text](/src/main/resources/static/images/dynamic-screenshot-mobile.png?raw=true "Optional Title")
-![Alt text](/src/main/resources/static/images/change-city-screenshot-mobile.png?raw=true "Optional Title")
+![Alt text](/src/main/resources/static/images/home-screenshot-mobile.png?raw=true "Home Page Mobile")
+![Alt text](/src/main/resources/static/images/dynamic-screenshot-mobile.png?raw=true "Dynamic Forecast Mobile")
+![Alt text](/src/main/resources/static/images/change-city-screenshot-mobile.png?raw=true "Changing City Mobile")
