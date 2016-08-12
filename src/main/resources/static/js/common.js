@@ -129,7 +129,7 @@ function plotGraph(cityName, maxRange, minRange, minValue) {
             ]
         },
         yAxis: [{
-            min: minValue,
+            min: Math.min(0,parseInt(minValue)),
             title: {
                 text: 'Temperature (°C)'
             }
