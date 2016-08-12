@@ -79,6 +79,8 @@ class CustomSet {
 
 function getWeatherDayHtml(name,max,min,icon) {
 	
+	//icon = icon.replace("n","d")
+	
 	var maxStr, minStr;
 	
 	var maxStr = Math.abs(max) > 9 ? (max+"&deg;C") : (max > 0 ? "0"+max+"&deg;C" : "-0"+Math.abs(max)+"&deg;C");

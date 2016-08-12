@@ -112,20 +112,22 @@ public class ViewWeatherResponse {
 					if(map.containsKey(key)) {
 						WeatherTransformDTO currentForDay = map.get(key);
 						
-						Calendar cal = Calendar.getInstance();
+						Calendar cal1 = Calendar.getInstance();
+						cal1.setTime(dto.getDate());
+						int newHour = cal1.get(Calendar.HOUR_OF_DAY);
 						
-						cal.setTime(dto.getDate());
-						int newHour = cal.get(Calendar.HOUR_OF_DAY);
-						
-						cal.setTime(currentForDay.getDate());
-						int currentHour = cal.get(Calendar.HOUR_OF_DAY);
+						Calendar cal2 = Calendar.getInstance();
+						cal2.setTime(currentForDay.getDate());
+						int currentHour = cal2.get(Calendar.HOUR_OF_DAY);
 						
 						if( Math.abs(12-newHour) < Math.abs(12-currentHour) ) { 
 							currentForDay.setCondition(dto.getCondition());
 							currentForDay.setIcon(dto.getIcon());
+							currentForDay.setDate(dto.getDate());
 						} else if( Math.abs(12-newHour) == Math.abs(12-currentHour) && newHour > currentHour) {
 							currentForDay.setCondition(dto.getCondition());
 							currentForDay.setIcon(dto.getIcon());
+							currentForDay.setDate(dto.getDate());
 						}
 						
 						if(currentForDay.getLow() > dto.getLow()) {
