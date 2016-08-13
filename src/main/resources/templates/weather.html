@@ -20,25 +20,27 @@
 		<script th:src="'js/weather-' + ${type} +'.js'"></script>
 	</head>
 	<body>
-		<h1 th:text="${typeFirstUpper} + ' Weather Forecast'"></h1>
-		<h2></h2>
-		
-		<div th:if="${type == 'dynamic'}" style="text-align: center;margin-bottom: 16px;">
-			<div id="changeCityBtn" class="button" onclick="showCitySearch();">CHANGE CITY</div>
+		<div id="main">
+			<h1 th:text="${typeFirstUpper} + ' Weather Forecast'"></h1>
+			<h2></h2>
+			
+			<div th:if="${type == 'dynamic'}" style="text-align: center;margin-bottom: 16px;">
+				<div id="changeCityBtn" class="button" onclick="showCitySearch();">CHANGE CITY</div>
+			</div>
+			
+			<div id="day1Value"></div>
+			<div id="forecast"></div>
+			
+			<div id="averages">
+				<div id="avgMax">AVERAGE MAX = <span id="avgMaxValue"></span></div>
+				<div id="avgMin">AVERAGE MIN = <span id="avgMinValue"></span></div>
+			</div>
+			
+			<div id="missingTemps">MISSING TEMPERATURES:<br /><span id="missingTempsValues"></span></div>
+			
+			<label id="graphLabel">GRAPH:</label>
+			<div id="graph"></div>
 		</div>
-		
-		<div id="day1Value"></div>
-		<div id="forecast"></div>
-		
-		<div id="averages">
-			<div id="avgMax">AVERAGE MAX = <span id="avgMaxValue"></span></div>
-			<div id="avgMin">AVERAGE MIN = <span id="avgMinValue"></span></div>
-		</div>
-		
-		<div id="missingTemps">MISSING TEMPERATURES:<br /><span id="missingTempsValues"></span></div>
-		
-		<label id="graphLabel">GRAPH:</label>
-		<div id="graph"></div>
 		
 		<div class="cover" style="z-index: 110;">
 			<img class="ajax hvCenter" src="images/ajax.gif" />
