@@ -1,5 +1,7 @@
 ## INTRODUCTION
 
+_NB: This project was the technical assignment of a job interview I did back in 2016 (I got the job 😉)_
+
 The WeatherAppTest project is a project that implements the coding task specified in the "specification.pdf" file. The project is about reading weather forecast data initially from a static json file and then later from a 3rd party api and then displaying the data on a web page.
 
 ## INSTALLATION
